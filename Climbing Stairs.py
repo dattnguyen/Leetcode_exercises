@@ -12,7 +12,7 @@ def climbstairs(n):
         hmap[i] = hmap[i-1] + hmap[i-2]
     return print(hmap[n])
 
-climbstairs(12)
+climbstairs(5)
 #%%
 n = 4
 hmap = {0 : 1, 1: 1}
