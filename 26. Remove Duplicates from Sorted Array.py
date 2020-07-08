@@ -12,6 +12,6 @@ def removeDuplicates(): #the problem is asking if an array is already sorted
         if nums[x] != nums[head]: # if the second is different from the first
             head += 1 #increase the counter to compare the next position
             nums[head] = nums[x] #with the starting position is now updated to the second position
-    return print(head+1)
+    return print(nums[:head+1])
 nums = [2, 4, 5, 5, 6, 6, 7, 8, 8]
 removeDuplicates()
