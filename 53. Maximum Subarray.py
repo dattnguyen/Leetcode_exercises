@@ -1,4 +1,4 @@
-nums = [-1]
+nums = [-5, -2, -4, -5]
 current_sum = 0
 best_sum = 0
 for i in nums:
