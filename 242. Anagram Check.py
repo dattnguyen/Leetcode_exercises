@@ -1,3 +1,6 @@
+# create a hashmap to check whether all the keys have 0 value by going through
+#the first string and add all the char in, then go through the second string
+#and decrease the value of the char
 s1 = 'public relations'
 s2 = 'crap built on lies'
 
@@ -24,3 +27,22 @@ for char in s2:
 for k in mydict: #check if dictionary count is 0
     if mydict[k] != 0:
         print('Not Anagram')
+
+#%%
+#sort the string and add it to hmap, check whether if the 2 strings
+#have the same sorted value
+
+def isAnagram (s1, s2):
+    hmap = {}
+    key1 = ''.join(sorted(s1))
+    key2 = ''.join(sorted(s2))
+    hmap[key1] = 1
+    if key2 in hmap:
+        return print ('Two strings are anagram.')
+    else:
+        return print ('Two strings are NOT anagram.')
+
+s1 = 'abc'
+s2 = 'cba'
+
+isAnagram(s1, s2)

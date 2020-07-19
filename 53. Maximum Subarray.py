@@ -8,7 +8,8 @@ for i in nums:
 print(best_sum)
 #%%
 nums =  [-5, -2, -4, -5]
-for i in range(1, len(nums)): #we use Kadane's algorithm by looking at the previous subarray and compare the max of (current index, sum of previous subarray)
+for i in range(1, len(nums)): #we use Kadane's algorithm by looking at the previous subarray
+                            # and compare the max of (current index, sum of previous subarray)
     if nums[i - 1] > 0: #if the previous subarray is positive, it can get bigger so. This will save some time
         nums[i] += nums[i - 1]
 print(max(nums))
