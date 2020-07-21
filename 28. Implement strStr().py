@@ -4,11 +4,10 @@
 def strStr(haystack, needle):
     if needle == '':
         return 0
-    for i in range(len(haystack) - len(
-            needle) + 1):  # we don't need to check the last j character of the haystack. Plus 1 account for range function
+    for i in range(len(haystack) - len(needle) + 1):
+        # we don't need to check the last j character of the haystack. Plus 1 account for range function
         for j in range(len(needle)):
-            if haystack[i + j] != needle[
-                j]:  # check each character in haystack, move on to the next character if mismatch
+            if haystack[i + j] != needle[j]:  # check each character in haystack, move on to the next character if mismatch
                 break
             if j == (len(needle) - 1):  # check if match the number of character of the needle
                 return i

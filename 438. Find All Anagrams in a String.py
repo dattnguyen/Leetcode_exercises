@@ -19,3 +19,47 @@ while right <= len(s):
     right += 1
 
 print(result)
+
+#%%
+
+#2 dictionary
+from collections import Counter
+s = 'abcdebca'
+p = 'abc'
+count_p = Counter(p)
+count_s = Counter()
+
+res = []
+
+right = 0
+
+for right in range(len(s)):
+    count_s[s[right]] += 1
+    if right >= len(p):
+        if count_s[s[right-len(p)]] == 1:
+            del count_s[s[right-len(p)]]
+        else:
+            count_s[s[right-len(p)]] -= 1
+    if count_s == count_p:
+        res.append(right-len(p)+1)
+
+print(res)
+#%%
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        res = []
+        freq = [0] * 128
+        for c in p:
+            freq[ord(c)] += 1
+        i,counter = 0,0;
+        for j in range(0, len(s)):
+            if freq[ord(s[j])] > 0 :
+                counter += 1
+            freq[ord(s[j])] -= 1
+            if counter == len(p) :
+                res.append(i)
+            if (j - i + 1) == len(p):
+                freq[ord(s[i])] += 1
+                if freq[ord(s[i])] > 0: counter -= 1
+                i += 1
+        return res
