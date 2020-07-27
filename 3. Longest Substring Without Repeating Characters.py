@@ -19,7 +19,7 @@ lengthofLongestSubstr('abcbadcablmn')
 #%%
 #use map to store characters:
 
-s = "pwwkew"
+s = "tmmzuxta"
 
 hmap = {}
 left = 0
@@ -37,6 +37,8 @@ print(result)
 
 #Here's an example: "tmmzuxta"
 #
-# Two characters are repeated: t and m. Because of the repeated m, your start will be 2. Now, when you're at the second occurrence of t, this check ensures that you don't go into the if just because you've seen it before. In this case, you have seen it before BUT you saw it before you started the count.
+# Two characters are repeated: t and m. Because of the repeated m, your start will be 2. Now, when you're at the second
+# occurrence of t, this check ensures that you don't go into the if just because you've seen it before.
+# In this case, you have seen it before BUT you saw it before you started the count.
 #
-# If you remove that condition, your maxlength will be 5. Otherwise it will be 6 - which is the right answer
+# If you remove that condition, your maxlength will be 7. Otherwise it will be 6 - which is the right answer

@@ -39,6 +39,7 @@ while left < right: #start from the two ends towards the middle
         result.append([nums[left], nums[right]])
         left += 1
         while left < right and nums[left] == nums[left-1]: #account for duplicate
+            # you still need left < right in the case [2,2,2,2], target = 4 otherwise out of index
             left += 1 #by moving the left pointer pass the duplicate value
     elif nums[left] + nums[right] > target: #if the sum is more than target, reduce right
         right -= 1
