@@ -52,4 +52,4 @@ def wordPattern2(pattern, str):
 
     return print('True')
 
-wordPattern2('aaa','dog dog dog dog')
+wordPattern2('abaa','dog dog dog dog')
