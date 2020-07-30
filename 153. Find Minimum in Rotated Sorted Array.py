@@ -10,7 +10,7 @@ def findmin(nums):
     while low < high:
         mid = (low + high)//2
         if nums[mid] > nums[high]:
-            low = mid + 1Find
+            low = mid + 1
         else:
             high = mid
 

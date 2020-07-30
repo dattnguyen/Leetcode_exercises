@@ -17,12 +17,12 @@ def search(nums, target):
 
         if nums[mid] < nums[right]: #if mid less than right, we know that everything from mid to right has been sorted
 
-            if nums[mid] <= target <= nums[right]: #check if target is in this sorted part
+            if nums[mid] <= target: #check if target is in this sorted part
                 left = mid + 1 #if yes, bring the left to mid + 1 (because we already check mid)
             else:
                 right = mid - 1 #if it's on the other section, bring right to mid -1
         else:
-            if nums[left] <= target <= nums[mid]:
+            if target <= nums[mid]:
                 right = mid - 1
             else:
                 left = mid + 1
