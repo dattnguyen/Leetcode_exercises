@@ -2,6 +2,7 @@
 #
 # Follow up: Do not use any built-in library function such as sqrt.
 
+#binary search, iteration
 def isPerfectSquare(num):
     low = 0
     high = num
@@ -33,3 +34,15 @@ def isPerfectSquare_recursion(num):
             return helper(num, low, mid - 1)
 
     return helper(num, 0, num)
+
+#%%
+#Newton's method
+
+def isPerfectSquare_Newton(num):
+    root = num
+    while root**2 > num:
+        root = (root + num/root) //2
+
+    return print(root**2 == num)
+
+isPerfectSquare_Newton(15)

@@ -53,3 +53,6 @@ def wordPattern2(pattern, str):
     return print('True')
 
 wordPattern2('abaa','dog dog dog dog')
+
+#%%
+def wordPattern_set(pattern, str):
