@@ -35,3 +35,6 @@ def findtheDiff (s,t):
 s = 'abcdddbbcca'
 t = 'cacbaabdbdcd'
 findtheDiff(s,t)
+
+#%%
+print(7%10)
