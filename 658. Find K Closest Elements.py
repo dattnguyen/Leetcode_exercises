@@ -68,11 +68,11 @@ low = 0
 high = len(arr)-k
 while low < high:
     mid = (low+high)//2
-    print('low before is: ',low,'mid before is: ',mid,'high before is: ',high,)
+    # print('low before is: ',low,'mid before is: ',mid,'high before is: ',high,)
     if x - arr[mid] > arr[mid+k] -x:
         low = mid + 1
     else:
         high = mid
 
-    print('low after is: ', low, 'mid after is: ', mid, 'high after is: ', high, )
+    # print('low after is: ', low, 'mid after is: ', mid, 'high after is: ', high, )
 print(arr[low: high+k])

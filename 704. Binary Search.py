@@ -9,7 +9,7 @@ def search(nums, target):
     while left <= right:
         middle = (left+right)//2
         if nums[middle] == target:
-            return middle
+            return print(middle)
 
         elif nums[middle] < target:
             left = middle + 1
@@ -17,3 +17,5 @@ def search(nums, target):
         else:
             right = middle - 1
     return -1
+
+search([5,7,7,8,8,8,10,12],8)
