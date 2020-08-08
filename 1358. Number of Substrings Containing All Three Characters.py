@@ -11,7 +11,7 @@ count = Counter()
 
 for right in range(len(s)):
     count[s[right]] += 1
-    while len(count) == 3:
+    while len(count) == 3:  
         res += len(s) - right
         count[s[left]] -= 1
         if not count[s[left]]:
