@@ -10,6 +10,10 @@ check = {0:1}
 counter = 0
 preSum = 0
 
+#intuition is that the difference between presum[j] - presum[i]
+#equal to the sum of the elements between index j and i
+#instead of finding the difference between presum[j] and presum[i] that equal k
+#we check if presum[j] - k = presum[i] by storing presum[i] in a dictionary
 for num in nums:
     preSum += num
     if preSum - k in check:
@@ -20,3 +24,13 @@ for num in nums:
         check[preSum] =1
 
 print(counter)
+
+#%%
+nums = [3,4,7,2,-3,1,4,2,1]
+presum = []
+total = 0
+for i in range(len(nums)):
+    total += nums[i]
+    presum.append(total)
+
+print(presum)
