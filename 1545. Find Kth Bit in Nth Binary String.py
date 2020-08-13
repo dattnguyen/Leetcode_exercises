@@ -29,6 +29,10 @@ def findKthBit (n,k):
     else:
         return str(1-int(findKthBit(n-1,l-k+1)))
 
-    #l-k+1 to inverse
+    #why l-k+1? Example: S(4) = 01110011011 '0' 001, k = 12
+    # S(3) = 0111001 -> invert to 100 '0' 110
+    #the number '0', which is the 12th element in S(4), is the (15-12+1) = 4th
+    #element in the invert version of S(3)
+    #after that, we take 1 - int(...) to find the reversed version
 
 findKthBit(4,11)

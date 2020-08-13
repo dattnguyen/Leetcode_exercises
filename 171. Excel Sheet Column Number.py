@@ -1,4 +1,4 @@
-s = 'XY'
+s = 'ABC'
 right = len(s)-1
 mul = 0
 res = 0
