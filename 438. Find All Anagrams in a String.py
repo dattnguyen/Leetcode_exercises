@@ -36,7 +36,7 @@ right = 0
 for right in range(len(s)):
     count_s[s[right]] += 1
     if right >= len(p):
-        if count_s[s[right-len(p)]] == 1:
+        if count_s[s[right-len(p)]] == 1: #if the frequency is
             del count_s[s[right-len(p)]]
         else:
             count_s[s[right-len(p)]] -= 1
