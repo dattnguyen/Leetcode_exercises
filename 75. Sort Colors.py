@@ -29,11 +29,4 @@ def sortColors(arr):
             white += 1 #if you see '1', move forward because you don't need to swap its place
 
     return print(arr)
-sortColors([2,0,1])
-
-
-
-
-
-arr = [1,2,0,2,1,1,2,2,1,0]
-
+sortColors([1,2,0,2,1,1,2,2,1,0])
