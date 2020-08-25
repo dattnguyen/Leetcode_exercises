@@ -51,5 +51,3 @@ def numSquares_bfs(n):
     return print(res)
 
 numSquares_bfs(13)
-
-#%%
