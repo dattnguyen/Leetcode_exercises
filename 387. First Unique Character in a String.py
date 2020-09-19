@@ -1,6 +1,8 @@
 # Given a string, find the first non-repeating character in it and return its index.
 # If it doesn't exist, return -1.
 
+#intuition is: you want a hashmap to keep track of the index, and a seen set
+#to keep track if the character already appears.
 def firstUniqchar(s):
     hmap = {}
     seen = set() #Unordered collections of unique elements¶
