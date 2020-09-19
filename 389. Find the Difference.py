@@ -7,21 +7,18 @@ def findtheDifference(s, t):
     hmap = {}
 
     for char in s:
-        if char not in hmap:
-            hmap[char] = 1
-        else:
-            hmap[char] +=1
-
+        hmap[char] = hmap.get(char,0) + 1
     for char in t:
         if char in hmap:
-            hmap[char] -=1
-            if hmap[char] == -1:
-                return print(char)
+            hmap[char] -= 1
         else:
-            return print(char)
+            hmap[char] = 1
+    for k in hmap:
+        if hmap[k] != 0:
+            return print(k)
 
-s = 'abcdddbbcca'
-t = 'cacbaabdbdcd'
+s = 'abcd'
+t = 'acedb'
 findtheDifference(s,t)
 #%%
 
