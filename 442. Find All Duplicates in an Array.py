@@ -35,4 +35,4 @@ for num in nums: #if the number appears twice, it will hash the 'element' to neg
     else:
         nums[abs(num)-1] *= -1
 
-print(res)
+print(nums)
